@@ -1,0 +1,163 @@
+body {
+  font: 20px Helvetica, Arial;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+h3 {
+  color: rgb(29, 112, 195);
+}
+.back {
+  margin-left: 10%;
+}
+form {
+  width: 40%;
+  float: left;
+}
+.container {
+  width: 40%;
+  float: left;
+  margin-top: 3em;
+  color: #000;
+  text-align: center;
+}
+input {
+  display: table;
+  margin-bottom: 1em;
+  width: 60%;
+  font-size: 16px;
+  border: 2px solid rgb(41, 173, 180);
+  border-radius: 5px;
+  padding: 3px;
+}
+#file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+.upload,
+button {
+  color: #fff;
+  background: rgb(135, 213, 86);
+  padding: 5px;
+  border: 2px solid rgb(135, 213, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.upload:hover,
+button:hover{
+  background: rgb(96, 208, 26);
+  scale: 1.2;
+  transition: ease-in-out 0.3s;
+}
+form span {
+  font-size: 12px;
+}
+#preview {
+  font-size: 16px;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+#result {
+  position: relative;
+  width: 70%;
+  margin-left: 15%;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 2em;
+}
+header {
+  width: 100%;
+  background: rgb(110, 164, 219);
+
+  border-radius: 12px 12px 0 0;
+}
+header::after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+.camp {
+  width: 40%;
+  float: left;
+  color: #fff;
+}
+.camp h4 {
+  margin: 18px auto 0 7px;
+  text-align: left;
+}
+.camp span {
+  /* margin-left: 8px; */
+  margin: 12px auto 0 7px;
+  text-align: left;
+  font-weight: lighter;
+  font-size: smaller;
+}
+#logo {
+  width: 140px;
+  height: 80px;
+  float: right;
+}
+/* Now we get into the content part */
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 180px; 
+  overflow: hidden; /
+}
+.content::before {
+  content: "";
+  background-image: url("/background.webp");
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; 
+  z-index: -1;
+}
+
+.content::after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+.content img {
+  float: left;
+  width: 80px;
+  height: 105px;
+  margin-left: 7px;
+  margin-top: 10px;
+  margin-bottom: 9px;
+}
+.content ul {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  text-align: right;
+}
+ul li {
+  list-style-type: none;
+}
+
+#down {
+  font-size: 18px;
+}
+@media only screen and (max-width: 768px) {
+  .container,
+  form {
+    width: 90%;
+    margin-left: 5%;
+  }
+  #result {
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  #down {
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+}

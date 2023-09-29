@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="codexdebayan"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Id Card Generator</title>
+    <link rel="icon" href="logo.png">
+  </head>
+
+  <body>
+    <div class="back">
+      <form>
+        <h3>Please fill-in the form</h3>
+        <label>Full Name</label>
+        <input type="text" id="inName" placeholder="Your name..." />
+        <label>Date of birth</label>
+        <input type="date" id="inBirth" placeholder="Date of birth..." />
+        <label>Field</label>
+        <input type="text" id="inField" placeholder="Field..." />
+        <label>Year</label>
+        <input type="number" id="inYear" placeholder="Year..." />
+        <label>Registration number</label>
+        <input type="number" id="inNum" placeholder="Subscription number..." />
+        <label for="file" class="upload">Upload an Image</label>
+        <br />
+        <span>Choose one that desrcibes you perfectly</span>
+        <input
+          type="file"
+          id="file"
+          accept="image/*"
+          onchange="loadImage(event)"
+        />
+      </form>
+
+      <div class="container">
+        <div id="result" class="card">
+          <header id="head">
+            <div class="camp">
+              <h4>LPU</h4>
+              <span>Punjab,Phagwara</span>
+            </div>
+            <img src="./logo2.webp" id="logo" />
+          </header>
+
+          <div class="content">
+            <img src="" id="imgDisplayed" />
+            <ul>
+              <li id="name"></li>
+              <li id="birth"></li>
+              <li id="fieldYear"></li>
+              <li>Reg.no.:<span id="num"></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <button type="submit" id="preview">Generate</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
